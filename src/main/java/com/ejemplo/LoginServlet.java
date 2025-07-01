@@ -64,6 +64,7 @@ public class LoginServlet extends HttpServlet {
 
                 out.println("<div class='perfil-container'>");
                 out.println("<h1>¡Bienvenido, " + username + "!</h1>");
+                session.setAttribute("username", username);
                 out.println("<p>Te has conectado exitosamente. ¿Qué deseas hacer hoy?</p>");
 
                 out.println("<div class='menu'>");
