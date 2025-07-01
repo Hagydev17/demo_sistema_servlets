@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ordenar Helado</title>
+  <style>
+    /* Reset básico */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background: #f0f4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    form {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        width: 350px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+        font-weight: 700;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #555;
+    }
+
+    select, input[type="submit"] {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1.8px solid #ccc;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+
+    select:focus {
+        outline: none;
+        border-color: #007BFF;
+        box-shadow: 0 0 8px #007BFF;
+    }
+
+    input[type="submit"] {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    br {
+        margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+<form action="proceso-ordenar" method="post">
+  <h2>Ordena tu Helado</h2>
+
+  <label for="tipo">Selecciona el tipo de helado</label>
+  <select name="tipo" required id="tipo">
+    <option value="" disabled selected>-- Elige una opción --</option>
+    <option value="Helado en vaso">Helado en vaso</option>
+    <option value="Helado en plato">Helado en plato</option>
+    <option value="Helado con galletas">Helado con galletas</option>
+    <option value="Helado en cono">Helado en cono</option>
+  </select>
+  <br />
+
+  <label for="cantidad-tipo">Cantidad</label>
+  <select id="cantidad-tipo" name="cantidad-tipo" required>
+    <option value="" disabled selected>Seleccione cantidad</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+  <br />
+
+  <label for="sabor">Selecciona un sabor</label>
+  <select name="sabor" required id="sabor">
+    <option value="" disabled selected>-- Elige una opción --</option>
+    <option value="Chocolate">Chocolate</option>
+    <option value="Vainilla">Vainilla</option>
+    <option value="Fresa">Fresa</option>
+    <option value="Menta">Menta</option>
+  </select>
+
+  <input type="submit" value="Confirmar" />
+</form>
+</body>
+</html>

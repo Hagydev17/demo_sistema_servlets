@@ -18,7 +18,7 @@ public class LoginServlet extends HttpServlet {
 
         String usuario = req.getParameter("usuario");
 
-        HttpSession session = req.getSession(); // true por default: crea si no existe
+        HttpSession session = req.getSession();
         session.setAttribute("username", usuario);
 
         String username = req.getParameter("usuario");

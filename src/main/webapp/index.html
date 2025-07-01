@@ -1,36 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Helados Java</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #d54969;
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav.nav-principal {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
+        }
+
+        nav.nav-principal a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav.nav-principal a:hover {
+            background-color: #974356;
+        }
+
+        main.main {
+            flex: 1;
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: white;
+            max-width: 900px;
+            margin: 30px auto 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        main.main h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            color: #d54969;
+            margin-bottom: 15px;
+        }
+
+        main.main img {
+            width: 160px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        main.main p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .dashboard-helados {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .dashboard-helados img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dashboard-helados img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 10px;
+            background: #d54969;
+            color: white;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-top: auto;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive ajustes */
+        @media (max-width: 600px) {
+            main.main h1 {
+                font-size: 2.2rem;
+            }
+
+            nav.nav-principal {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
     <nav class="nav-principal">
         <a href="formulario.html">Iniciar sesión</a>
         <a href="menuhelados.html">Menú de helados</a>
-        <a href="">Ordenar</a>
-        <a href="">Contacto</a>
+        <a href="formulario.html">Ordenar</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="ordenar-helados.html">ordenar helados prueba</a>
     </nav>
 </header>
 
 <main class="main">
     <h1>Helados Java</h1>
-    <img src="img/logo_header.JPG" alt="logo">
+    <img src="img/logo_header.JPG" alt="logo Helados Java" />
     <p>Sistema de gestión para heladería</p>
 </main>
+
 <section>
     <div class="dashboard-helados">
-        <img class="img-div1" src="img/img1.jpg" alt="img1">
-        <img class="img-div2" src="img/img2.jpg" alt="img2">
-        <img class="img-div3" src="img/img3.jpg" alt="img3">
-        <img class="img-div4" src="img/img4.jpg" alt="img4">
-        <img class="img-div5" src="img/img5.jpg" alt="img5">
+        <img class="img-div1" src="img/img1.jpg" alt="Helado 1" />
+        <img class="img-div2" src="img/img2.jpg" alt="Helado 2" />
+        <img class="img-div3" src="img/img3.jpg" alt="Helado 3" />
+        <img class="img-div4" src="img/img4.jpg" alt="Helado 4" />
+        <img class="img-div5" src="img/img5.jpg" alt="Helado 5" />
     </div>
 </section>
+
 <footer>
-    Hagy G. Hernández - Desarrollador - ©Todos los derechos reservados
+    Hagy G. Hernández - Desarrollador - © Todos los derechos reservados
 </footer>
 </body>
 </html>

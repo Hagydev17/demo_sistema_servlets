@@ -31,7 +31,7 @@ public class MenuHeladosUserServlet extends HttpServlet {
         out.println("</head>");
         out.println("<body>");
         out.println("<header class='header-menu'>");
-        out.println("    <h2>Hola "+ username1 +" Descubre tu sabor favorito</h2>");
+        out.println("    <h2>¡Hola "+ username1 +"! Descubre tu sabor favorito</h2>");
         out.println("    <p>Explora nuestra variedad de helados, toppings y tamaños. ¡Hay uno perfecto para ti!</p>");
         out.println("    <a href='index.html'>Volver a inicio</a>");
         out.println("</header>");
@@ -48,7 +48,7 @@ public class MenuHeladosUserServlet extends HttpServlet {
         out.println("            <li><strong>Mediano:</strong> <span>$55</span></li>");
         out.println("            <li><strong>Grande:</strong> <span>$70</span></li>");
         out.println("        </ul>");
-        out.println("        <a href=''>Ordene aquí</a>");
+        out.println("        <a href='\" + req.getContextPath() + \"/pedir-helado'>Ordene aquí</a>");
         out.println("    </div>");
         out.println("</div>");
 
@@ -63,7 +63,7 @@ public class MenuHeladosUserServlet extends HttpServlet {
         out.println("            <li><strong>Mediano:</strong> <span>$65</span></li>");
         out.println("            <li><strong>Grande:</strong> <span>$80</span></li>");
         out.println("        </ul>");
-        out.println("        <a href=''>Ordene aquí</a>");
+        out.println("        <a href='pedir-helado'>Ordene aquí</a>");
         out.println("    </div>");
         out.println("</div>");
 
@@ -72,13 +72,13 @@ public class MenuHeladosUserServlet extends HttpServlet {
         out.println("    <img src='img/img3.jpg' alt='helado con galletas' width='300px' height='300px' style='border-radius: 10px;'>");
         out.println("    <div class='contenedor-helados'>");
         out.println("        <h4>Helado con galletas</h4>");
-        out.println("        <p>Disfruta de nuestro delicioso helado servido en un elegante vaso, combínalo con tus sabores favoritos. Perfecto para disfrutar en el lugar, con una textura cremosa y sabores irresistibles que degustan tu paladar en cada cucharada.</p>");
+        out.println("        <p>Una deliciosa combinación de cremoso helado acompañado por crujientes galletas. Perfecto para los amantes del dulce, este postre combina lo mejor de dos mundos: suavidad y crocancia en una sola experiencia.</p>");
         out.println("        <ul>");
         out.println("            <li><strong>Chico:</strong> <span>$40</span></li>");
         out.println("            <li><strong>Mediano:</strong> <span>$55</span></li>");
         out.println("            <li><strong>Grande:</strong> <span>$70</span></li>");
         out.println("        </ul>");
-        out.println("        <a href=''>Ordene aquí</a>");
+        out.println("        <a href='pedir-helado'>Ordene aquí</a>");
         out.println("    </div>");
         out.println("</div>");
 
@@ -93,7 +93,7 @@ public class MenuHeladosUserServlet extends HttpServlet {
         out.println("            <li><strong>Mediano:</strong> <span>$35</span></li>");
         out.println("            <li><strong>Grande:</strong> <span>$45</span></li>");
         out.println("        </ul>");
-        out.println("        <a href=''>Ordene aquí</a>");
+        out.println("        <a href='pedir-helado'>Ordene aquí</a>");
         out.println("    </div>");
         out.println("</div>");
 

@@ -1,9 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menú de Helados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9fafb;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header.header-menu {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header.header-menu h2 {
+            font-weight: 600;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        header.header-menu p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        header.header-menu a {
+            text-decoration: none;
+            background: #27ae60;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            display: inline-block;
+        }
+
+        header.header-menu a:hover {
+            background: #219150;
+        }
+
+        .contenedor-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .contenedor-menu > div {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            max-width: 320px;
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .contenedor-menu > div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .contenedor-menu img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .contenedor-helados {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contenedor-helados h4 {
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        .contenedor-helados p {
+            flex-grow: 1;
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .contenedor-helados ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .contenedor-helados ul li {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .contenedor-helados ul li strong {
+            color: #27ae60;
+        }
+
+        .contenedor-helados ul li span {
+            color: #e67e22;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .contenedor-helados a {
+            text-align: center;
+            padding: 12px 0;
+            background: #e67e22;
+            color: white;
+            font-weight: 600;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            display: block;
+        }
+
+        .contenedor-helados a:hover {
+            background: #cf711c;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contenedor-menu {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contenedor-menu > div {
+                max-width: 90%;
+            }
+        }
+    </style>
 </head>
 <body>
 <header class="header-menu">
@@ -13,94 +161,58 @@
 </header>
 <section class="contenedor-menu">
     <div class="div1-menu">
-        <img src="img/img1.jpg" alt="helado en vaso" width="300px" height="300px" style="border-radius: 10px;">
+        <img src="img/img1.jpg" alt="helado en vaso" />
         <div class="contenedor-helados">
             <h4>Helado en vaso</h4>
-            <p> Disfruta de nuestro delicioso helado servido en un elegante vaso,
-                combínalo con tus sabores favoritos.
-                Perfecto para disfrutar en el lugar, con una textura cremosa y sabores irresistibles
-                que degustan tu paladar en cada cucharada.
-            </p>
+            <p>Disfruta de nuestro delicioso helado servido en un elegante vaso, combínalo con tus sabores favoritos. Perfecto para disfrutar en el lugar, con una textura cremosa y sabores irresistibles que degustan tu paladar en cada cucharada.</p>
             <ul>
-                <li>
-                    <strong>Chico:</strong> <span>$40</span>
-                </li>
-                <li>
-                    <strong>Mediano:</strong> <span>$55</span>
-                </li>
-                <li>
-                    <strong>Grande:</strong> <span>$70</span>
-                </li>
+                <li><strong>Chico:</strong> <span>$40</span></li>
+                <li><strong>Mediano:</strong> <span>$55</span></li>
+                <li><strong>Grande:</strong> <span>$70</span></li>
             </ul>
-            <a href="">Ordene aquí</a>
+            <a href="formulario.html">Ordene aquí</a>
         </div>
     </div>
+
     <div class="div2-menu">
-        <img src="img/img2.jpg" alt="helado en plato" width="300px" height="300px" style="border-radius: 10px;">
+        <img src="img/img2.jpg" alt="helado en plato" />
         <div class="contenedor-helados">
             <h4>Helado en plato</h4>
-            <p> Helado servido por rebanadas, elige las que más te gusten.
-                Combínalo con tus sabores favoritos y agrega complementos para hacerlo más delicioso.
-                El toque perfecto entre cremosidad y elegancia.
-            </p>
+            <p>Helado servido por rebanadas, elige las que más te gusten. Combínalo con tus sabores favoritos y agrega complementos para hacerlo más delicioso. El toque perfecto entre cremosidad y elegancia.</p>
             <ul>
-                <li>
-                    <strong>Chico:</strong> <span>$55</span>
-                </li>
-                <li>
-                    <strong>Mediano:</strong> <span>$65</span>
-                </li>
-                <li>
-                    <strong>Grande:</strong> <span>$80</span>
-                </li>
+                <li><strong>Chico:</strong> <span>$55</span></li>
+                <li><strong>Mediano:</strong> <span>$65</span></li>
+                <li><strong>Grande:</strong> <span>$80</span></li>
             </ul>
-            <a href="">Ordene aquí</a>
+            <a href="formulario.html">Ordene aquí</a>
         </div>
-
     </div>
+
     <div class="div3-menu">
-        <img src="img/img3.jpg" alt="helado con galletas" width="300px" height="300px" style="border-radius: 10px;">
+        <img src="img/img3.jpg" alt="helado con galletas" />
         <div class="contenedor-helados">
             <h4>Helado con galletas</h4>
-            <p> Disfruta de nuestro delicioso helado servido en un elegante vaso,
-                combínalo con tus sabores favoritos.
-                Perfecto para disfrutar en el lugar, con una textura cremosa y sabores irresistibles
-                que degustan tu paladar en cada cucharada.
-            </p>
+            <p>Una deliciosa combinación de cremoso helado acompañado por crujientes galletas. Perfecto para los amantes del dulce, este postre combina suavidad y crocancia en una sola experiencia.</p>
             <ul>
-                <li>
-                    <strong>Chico:</strong> <span>$40</span>
-                </li>
-                <li>
-                    <strong>Mediano:</strong> <span>$55</span>
-                </li>
-                <li>
-                    <strong>Grande:</strong> <span>$70</span>
-                </li>
+                <li><strong>Chico:</strong> <span>$40</span></li>
+                <li><strong>Mediano:</strong> <span>$55</span></li>
+                <li><strong>Grande:</strong> <span>$70</span></li>
             </ul>
-            <a href="">Ordene aquí</a>
+            <a href="formulario.html">Ordene aquí</a>
         </div>
     </div>
+
     <div class="div4-menu">
-        <img src="img/img4.jpg" alt="helado en cono" width="300px" height="300px" style="border-radius: 10px;">
+        <img src="img/img4.jpg" alt="helado en cono" />
         <div class="contenedor-helados">
             <h4>Helado en cono</h4>
-            <p> El clásico que nunca pasa de moda.
-                Disfruta tu helado servido en un crujiente cono que complementa perfectamente cada bocado.
-                Ideal para llevar y saborear en cualquier momento con estilo y sabor.
-            </p>
+            <p>El clásico que nunca pasa de moda. Disfruta tu helado servido en un crujiente cono que complementa perfectamente cada bocado. Ideal para llevar y saborear en cualquier momento con estilo y sabor.</p>
             <ul>
-                <li>
-                    <strong>Chico:</strong> <span>$25</span>
-                </li>
-                <li>
-                    <strong>Mediano:</strong> <span>$35</span>
-                </li>
-                <li>
-                    <strong>Grande:</strong> <span>$45</span>
-                </li>
+                <li><strong>Chico:</strong> <span>$25</span></li>
+                <li><strong>Mediano:</strong> <span>$35</span></li>
+                <li><strong>Grande:</strong> <span>$45</span></li>
             </ul>
-            <a href="">Ordene aquí</a>
+            <a href="formulario.html">Ordene aquí</a>
         </div>
     </div>
 </section>
