@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 public class MenuHeladosUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession(false); // no crear si no existe
+        HttpSession session = req.getSession(false);
         String username = (session != null) ? (String) session.getAttribute("username") : "Invitado";
 
         resp.setContentType("text/html");
